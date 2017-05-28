@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="attrs_login_fields">
+        <attr name="icon_code" format="boolean" />
+        <attr name="has_focus" format="boolean" />
+        <attr name="hint_text" format="string" />
+        <attr name="is_password" format="boolean" />
+    </declare-styleable>
+
+</resources>

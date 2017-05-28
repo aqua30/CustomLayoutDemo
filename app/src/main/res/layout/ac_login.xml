@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:login_field="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.aqua.demoproject.ui.views.font.AppTextViewBold
+        android:id="@+id/text_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name"
+        android:textSize="@dimen/text_size_extra_large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:animateLayoutChanges="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.aqua.demoproject.ui.views.LoginField
+            android:id="@+id/login_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            login_field:has_focus="true"
+            login_field:hint_text="email"
+            login_field:icon_code="@string/icon_email" />
+
+        <com.aqua.demoproject.ui.views.LoginField
+            android:id="@+id/login_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            login_field:has_focus="false"
+            login_field:hint_text="password"
+            login_field:icon_code="@string/icon_password"
+            login_field:is_password="true"/>
+
+        <com.aqua.demoproject.ui.views.LoginField
+            android:id="@+id/login_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            login_field:has_focus="false"
+            login_field:hint_text="confirm password"
+            login_field:icon_code="@string/icon_lock" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_login_options"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal">
+
+        <com.aqua.demoproject.ui.views.font.AppTextViewRegular
+            android:id="@+id/text_forgot_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|start|center_vertical"
+            android:layout_weight="1"
+            android:text="Forgot password"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/text_size_small" />
+
+        <com.aqua.demoproject.ui.views.font.AppTextViewRegular
+            android:id="@+id/text_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end|center_vertical"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Signup"
+            android:textColor="@color/silver"
+            android:textSize="@dimen/text_size_small" />
+
+    </LinearLayout>
+
+    <com.aqua.demoproject.ui.views.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/layout_login_options"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
+
+</RelativeLayout>

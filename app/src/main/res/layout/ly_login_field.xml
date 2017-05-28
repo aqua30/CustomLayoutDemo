@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.aqua.demoproject.ui.views.font.IconTextView
+        android:id="@+id/icon_login_field"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/text_size_regular"
+        tools:text="@string/icon_email" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal">
+
+            <com.aqua.demoproject.ui.views.font.AppEditText
+                android:id="@+id/edit_login_field"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:maxLines="1"
+                android:textColorHint="@color/silver"
+                android:textSize="@dimen/text_size_regular" />
+
+            <com.aqua.demoproject.ui.views.font.IconTextView
+                android:id="@+id/icon_show_password"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/silver"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/icon_eye" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="8dp" />
+
+    </LinearLayout>
+
+</merge>
