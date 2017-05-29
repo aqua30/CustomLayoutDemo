@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:login_field="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.aqua.demoproject.ui.views.font.AppTextViewBold
-        android:id="@+id/text_app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/app_name"
-        android:textSize="@dimen/text_size_extra_large" />
-
     <LinearLayout
+        android:id="@+id/login_field_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_weight="1"
         android:animateLayoutChanges="true"
         android:gravity="center"
         android:orientation="vertical">
@@ -43,7 +36,7 @@
             login_field:has_focus="false"
             login_field:hint_text="password"
             login_field:icon_code="@string/icon_password"
-            login_field:is_password="true"/>
+            login_field:is_password="true" />
 
         <com.aqua.demoproject.ui.views.LoginField
             android:id="@+id/login_confirm_password"
@@ -56,6 +49,15 @@
             login_field:icon_code="@string/icon_lock" />
 
     </LinearLayout>
+
+    <com.aqua.demoproject.ui.views.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
     <LinearLayout
         android:id="@+id/layout_login_options"
@@ -92,14 +94,4 @@
 
     </LinearLayout>
 
-    <com.aqua.demoproject.ui.views.LoginButton
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_above="@id/layout_login_options"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp" />
-
-</RelativeLayout>
+</LinearLayout>

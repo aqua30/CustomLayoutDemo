@@ -31,6 +31,8 @@ public class LoginActivity extends BaseActivity {
     @BindView(R.id.login_password)LoginField login_password;
     @BindView(R.id.login_confirm_password)LoginField confirm_password;
     @BindView(R.id.login_button)LoginButton login_button;
+    @BindView(R.id.layout_login_options)LinearLayout login_option_layout;
+    @BindView(R.id.login_field_layout)LinearLayout login_field_layout;
 
     @BindViews({R.id.text_sign_up, R.id.text_forgot_password})
     List<AppTextViewRegular> login_options;
@@ -48,15 +50,34 @@ public class LoginActivity extends BaseActivity {
     void onLogin(){
         if (!login_email.getFieldText().isEmpty()) {
             if (!login_password.getFieldText().isEmpty()) {
-                login_button.setButtonLoadingState(true);
-                login_email.enableField(false);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        login_button.setButtonLoadingState(false);
-                        login_button.setButtonText("Success");
+                if (has_sign_up) {
+                    if (!confirm_password.getFieldText().isEmpty()) {
+                        login_button.setButtonLoadingState(true);
+                        login_email.enableField(false);
+                        login_password.enableField(false);
+                        confirm_password.enableField(false);
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                login_button.setButtonLoadingState(false);
+                                login_button.setButtonText("Success");
+                            }
+                        }, 3000);
+                    } else {
+                        confirm_password.setError();
                     }
-                }, 3000);
+                } else {
+                    login_button.setButtonLoadingState(true);
+                    login_email.enableField(false);
+                    login_password.enableField(false);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            login_button.setButtonLoadingState(false);
+                            login_button.setButtonText("Success");
+                        }
+                    }, 3000);
+                }
             } else {
                 login_password.setError();
             }
