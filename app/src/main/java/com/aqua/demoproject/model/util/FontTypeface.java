@@ -1,4 +1,4 @@
-package com.aqua.demoproject.model;
+package com.aqua.demoproject.model.util;
 
 import android.content.Context;
 import android.graphics.Typeface;

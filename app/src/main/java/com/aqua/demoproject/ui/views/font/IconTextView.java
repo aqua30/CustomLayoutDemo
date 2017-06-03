@@ -5,8 +5,8 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import com.aqua.demoproject.model.FontTypeface;
-import com.aqua.demoproject.model.Fonts;
+import com.aqua.demoproject.model.util.FontTypeface;
+import com.aqua.demoproject.model.util.Fonts;
 
 /**
  * Created by Saurabh(aqua) on 28-05-2017.

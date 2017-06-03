@@ -1,4 +1,4 @@
-package com.aqua.demoproject.model;
+package com.aqua.demoproject.model.util;
 
 /**
  * Created by Saurabh(aqua) on 28-05-2017.
